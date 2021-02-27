@@ -1,10 +1,18 @@
-import Head from 'next/head'
+import Head from "next/head";
+import { ExperienceBar } from "../components/ExperienceBar";
 
+import styles from "./Home.module.scss";
 
 export default function Home() {
   return (
-    <div>
-      <h1>Hello World</h1>
+    <div className={styles.container}>
+      <Head>
+        <title>Início | PomoTraining</title>
+      </Head>
+
+      <ExperienceBar />
+      <section>
+      </section>
     </div>
-  )
+  );
 }
