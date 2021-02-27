@@ -12,7 +12,7 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>Início | Mov.it</title>
-        <link rel="shortcut icon" href="favicon.png" type="image/x-icon"/>
+        <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
       </Head>
 
       <ExperienceBar />
