@@ -3,10 +3,24 @@ import body from "../../assets/images/icons/body.svg";
 import eye from "../../assets/images/icons/eye.svg";
 import levelUP from "../../assets/images/icons/level-up.svg";
 import { ChallengesContext } from "../../contexts/ChallengesContext";
+import { CountdownContext } from "../../contexts/CountdownContext";
 import styles from "./ChallengeBox.module.scss";
 
 export function ChallengeBox() {
-  const { activeChallenge, resetChallenge } = useContext(ChallengesContext);
+  const { activeChallenge, resetChallenge, completeChallenge } = useContext(
+    ChallengesContext
+  );
+
+  const { resetCountDown } = useContext(CountdownContext);
+
+  const handleChallengeSucceded = () => {
+    completeChallenge();
+    resetCountDown();
+  };
+  const handleChallengeFailed = () => {
+    resetChallenge();
+    resetCountDown();
+  };
 
   return (
     <div className={styles.challengeBoxContainer}>
@@ -25,13 +39,14 @@ export function ChallengeBox() {
             <button
               type="button"
               className={styles.challengeBoxFailedButton}
-              onClick={resetChallenge}
+              onClick={handleChallengeFailed}
             >
               Falhei
             </button>
             <button
               type="button"
               className={styles.challengeBoxSucceededButton}
+              onClick={handleChallengeSucceded}
             >
               Completei
             </button>
