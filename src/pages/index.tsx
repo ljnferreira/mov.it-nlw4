@@ -5,6 +5,7 @@ import { CountDown } from "../components/Countdown/Index";
 import { ExperienceBar } from "../components/ExperienceBar";
 import { Profile } from "../components/Profile";
 import { CountDownProvider } from "../contexts/CountdownContext";
+import { ThemeToggler } from "../contexts/ThemeContext";
 
 import styles from "./Home.module.scss";
 
@@ -16,6 +17,7 @@ export default function Home() {
         <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
       </Head>
 
+      <ThemeToggler />
       <ExperienceBar />
 
       <CountDownProvider>
