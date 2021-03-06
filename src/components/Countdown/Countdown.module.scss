@@ -71,6 +71,7 @@
       color: var(--title);
       pointer-events: none;
       border-bottom: 5px solid var(--green);
+      cursor: not-allowed;
     }
 
     &:not(:disabled):hover {
