@@ -7,11 +7,16 @@
   flex-direction: column;
   gap: 3.5rem;
 
-  > section {
+  .gameSection {
     flex: 1;
     display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 6.25rem;
     align-content: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    .gameSection {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 }

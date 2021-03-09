@@ -35,7 +35,7 @@ export default function Home(props: HomeProps) {
         <ExperienceBar />
 
         <CountDownProvider>
-          <section>
+          <section className={styles.gameSection}>
             <div>
               <Profile />
               <CompleteChallenges />
