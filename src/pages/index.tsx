@@ -8,9 +8,9 @@ import { CountDown } from "../components/Countdown/Index";
 import { ExperienceBar } from "../components/ExperienceBar";
 import { Profile } from "../components/Profile";
 import { CountDownProvider } from "../contexts/CountdownContext";
-import { ThemeToggler } from "../contexts/ThemeContext";
 
 import styles from "./Home.module.scss";
+import { NavBar } from "../components/NavBar";
 
 interface HomeProps {
   level: number;
@@ -25,13 +25,12 @@ export default function Home(props: HomeProps) {
       currentExperience={props.currentExperience}
       challengesCompleted={props.challengesCompleted}
     >
+      <NavBar />
       <div className={styles.container}>
         <Head>
           <title>Início | Mov.it</title>
           <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
         </Head>
-
-        <ThemeToggler />
         <ExperienceBar />
 
         <CountDownProvider>
